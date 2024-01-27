@@ -1,0 +1,189 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "AreaOfRectangle",
+            "request": "launch",
+            "mainClass": "AreaOfRectangle",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "CheckMailNP",
+            "request": "launch",
+            "mainClass": "CheckMailNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "CountToHundred",
+            "request": "launch",
+            "mainClass": "CountToHundred",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "EnterPositiveNumber",
+            "request": "launch",
+            "mainClass": "EnterPositiveNumber",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "GradesArrayNP",
+            "request": "launch",
+            "mainClass": "GradesArrayNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "Greetings1",
+            "request": "launch",
+            "mainClass": "Greetings1",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "Greetings2",
+            "request": "launch",
+            "mainClass": "Greetings2",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "Greetings2new",
+            "request": "launch",
+            "mainClass": "Greetings2new",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "Greetings3AddingNumbers",
+            "request": "launch",
+            "mainClass": "Greetings3AddingNumbers",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "HelloWorld",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "IRSProgramNP",
+            "request": "launch",
+            "mainClass": "IRSProgramNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "LoanTableNP",
+            "request": "launch",
+            "mainClass": "LoanTableNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "PerimterOfRectangle",
+            "request": "launch",
+            "mainClass": "PerimterOfRectangle",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "QuadraticCalculatorNP",
+            "request": "launch",
+            "mainClass": "QuadraticCalculatorNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "QuadraticFormulaNP",
+            "request": "launch",
+            "mainClass": "QuadraticFormulaNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "RandomNumberGeneratorNP",
+            "request": "launch",
+            "mainClass": "RandomNumberGeneratorNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "RollDiceNP",
+            "request": "launch",
+            "mainClass": "RollDiceNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "TEST",
+            "request": "launch",
+            "mainClass": "TEST",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "TestCodeNP",
+            "request": "launch",
+            "mainClass": "TestCodeNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "TriangleArea",
+            "request": "launch",
+            "mainClass": "TriangleArea",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "TurtleGraphicsNP",
+            "request": "launch",
+            "mainClass": "TurtleGraphicsNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "areaOftriangleNP",
+            "request": "launch",
+            "mainClass": "areaOftriangleNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "draw",
+            "request": "launch",
+            "mainClass": "draw",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "initialsNSP",
+            "request": "launch",
+            "mainClass": "initialsNSP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "midtermprep",
+            "request": "launch",
+            "mainClass": "midtermprep",
+            "projectName": "SchoolRepo_dfae92c2"
+        }
+    ]
+}
