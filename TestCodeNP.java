@@ -1,7 +1,4 @@
 import java.util.Arrays;
-
-
-
 public class TestCodeNP {
     public static void main(String[] args) {
         char[] list = {'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', '0', '9'};
