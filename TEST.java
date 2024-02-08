@@ -1,23 +1,22 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class TEST{
+public class TEST {
     public static void main(String[] args) {
-        EasyReader console = new EasyReader();
-        System.out.println("How many names?");
-        int num = console.readInt();
-        Scanner sc = new Scanner(System.in);
-        String [] names = new String [num];
-        int [] ages = new int [num];
+        String name = "Posavec, Nikolas";
+        String rearrangedName = rearrangeName(name);
+        System.out.println(rearrangedName);
+    }
 
-        for( int i=0 ; i<num; i++){
-            System.out.println("What is name # " + (i+1) + "?");
-            names [i] = sc.next();
-            System.out.println("What is age # " + (i+1) + "?");
-            ages [i] = sc.nextInt();
-        }
+    public static String rearrangeName(String name) {
+        int commaIndex = name.indexOf(',');
+        String lastName = name.substring(0, commaIndex).trim();
+        String firstName = name.substring(commaIndex + 2).trim(); // +2 to skip comma and space
+
+        // Extracting middle initial (assuming there's only one middle name)
+        char middleInitial = firstName.charAt(firstName.indexOf(' ') + 1);
+
+        // Rearranging name with middle initial in the middle
+        firstName = firstName.substring(0, firstName.indexOf(' ')); // Extracting first name
+        String rearrangedName = firstName + " " + middleInitial + ". " + lastName;
         
-        System.out.println("Name\tAge");System.out.println("Name" + Arrays.toString(names) + "\tAge" + Arrays.toString(ages));
-     
-}
+        return rearrangedName;
+    }
 }
