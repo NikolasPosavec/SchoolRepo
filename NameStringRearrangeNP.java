@@ -1,12 +1,16 @@
 public class NameStringRearrangeNP {
     public static void main(String[] args) {
-        
-        String fullname = "Posavec, Nikolas";
+        String name = "Posavec, Nikolas Stjepan";
 
-        for(int i=0;i<1;i++){
-            int comma = fullname.indexOf(',');
-        }
+        int pos = name.indexOf(',');
 
-        int rearrangedname = fullname.substring()
+        String lastname = name.substring(0, pos);
+        String firstname = name.substring(pos + 2, name.indexOf(' ', pos + 2));
+        String middlename = name.substring(name.indexOf(' ', pos + 2) + 1);
+
+        System.out.println(firstname + " " + middlename + ", " + lastname);
     }
 }
+
+    
+
