@@ -8,6 +8,9 @@ public class PalindromeNP {
         String testWord = sc.nextLine();
         char [] letters = new char[testWord.length()];
 
+        testWord = testWord.replaceAll("[,\\s!]", "");
+        testWord = testWord.toLowerCase();
+
         for(int i=0; i<testWord.length(); i++){
             letters[i] = testWord.charAt(i);
         }
