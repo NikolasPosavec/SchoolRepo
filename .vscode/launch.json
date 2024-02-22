@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PalindromeNP",
+            "request": "launch",
+            "mainClass": "PalindromeNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "NameStringRearrangeNP",
             "request": "launch",
             "mainClass": "NameStringRearrangeNP",
