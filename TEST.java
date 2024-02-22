@@ -1,16 +1,30 @@
+import java.util.Scanner;
 public class TEST 
 {
-    public static void main(String[] args) 
-    {
-        String name = "Posavec, Nikolas Stjepan";
-        int pos = name.indexOf(',');
-        int space2 = name.indexOf(" ", pos+2);
-        
-        String lastname = name.substring(0, pos);
-        String firstname = name.substring(pos + 2, space2);
-        String middlename = name.substring(space2 + 1);
-        String minitial = middlename.substring(0,1);
+    public static void main(String[] args){
+    Scanner sc = new Scanner(System.in);
 
-        System.out.println(firstname + " " + minitial + ", " + lastname);
+    System.out.println("What is your word?");
+    String testWord = sc.nextLine();
+    char[] letters = new char[testWord.length()];
+
+    for (int i = 0; i < testWord.length(); i++) {
+        char ch = testWord.charAt(i);
+        letters[i] = ch;
     }
+
+    boolean isPalindrome = true;
+    for (int i = 0; i < testWord.length() / 2; i++) {
+        if (letters[i] != letters[testWord.length() - i - 1]) {
+            isPalindrome = false;
+            break;
+        }
+    }
+
+    if (isPalindrome) {
+        System.out.println("The word: " + testWord + " is a palindrome.");
+    } else {
+        System.out.println("The word: " + testWord + " is not a palindrome.");
+    }
+}
 }

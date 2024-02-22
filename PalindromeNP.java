@@ -9,17 +9,23 @@ public class PalindromeNP {
         char [] letters = new char[testWord.length()];
 
         for(int i=0; i<testWord.length(); i++){
-            char ch = testWord.charAt(i);
-            ch = letters [i];
+            letters[i] = testWord.charAt(i);
         }
 
-        if (letters[0]==letters[testWord.length()]){
-            for(int i = 1; i<testWord.length(); i++){
-                if(letters[0+i]==letters[testWord.length()-i]){
-                    System.out.println("The word: " + testWord + " is a palindrome." );
-                }
+        boolean palindromechecker = true;
+
+        for(int i = 0; i<testWord.length()/2; i++){
+            if (letters[i] != letters[testWord.length() - i - 1]) {
+                palindromechecker = false;
             }
         }
+        
+        if (palindromechecker) {
+            System.out.println("The word: " + testWord + " is a palindrome.");
+        } else {
+            System.out.println("The word: " + testWord + " is not a palindrome.");
+        }
     }
-    
 }
+    
+
