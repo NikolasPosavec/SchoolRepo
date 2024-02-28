@@ -10,7 +10,7 @@ public class PalindromeNP {
         StringBuilder sb = new StringBuilder();
         for (char ch : originalWord.toCharArray()) {
             if (Character.isLetter(ch)) {
-                sb.append(ch);
+                sb.append(ch); 
             }
         }
         String processedWord = sb.toString();

@@ -1,26 +1,31 @@
 import java.util.Scanner;
 public class TEST {
     public static void main(String[] args) {
-        
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("What is your word?");
-        String originalWord = sc.nextLine().toLowerCase();
+        System.out.println("Enter a word: ");
+        String pword = sc.nextLine().toLowerCase();
+        String norm = "";
+        String reverse = "";
+        boolean isPal = true;
+        
+        for(int i=0; i<pword.length(); i++){
+            if(pword.charAt(i) >= 'a' && pword.charAt(i) <= 'z'){
+                norm += pword.charAt(i);
+            }
+        }
 
-        StringBuilder sb = new StringBuilder();
-        for (char ch : originalWord.toCharArray()) {
-            if (Character.isLetter(ch)) {
-                sb.append(ch);
+        System.out.println(norm);
+
+        for(int i = 0; i<norm.length()-1; i++){
+            if(norm.charAt(i) != norm.charAt((norm.length()-1)-i)){
+                isPal = false;
+                System.out.println("The word " + pword + " is not a palindrome");
+                break;
             }
         }
-        String processedWord = sb.toString();
-        int processedlength = processedWord.length();
-        boolean palindrome = true;
-        for (int i = 0; i < processedlength / 2; i++) {
-            if (processedWord.charAt(i) != processedWord.charAt(processedlength - i - 1)) {
-                palindrome = false;
-            }
-        }
-        System.out.println("The word: " + processedWord + (palindrome ? " is a palindrome." : " is not a palindrome."));
+
+        if(isPal) System.out.println("This word " + pword + " is a palindrome!");
+
     }
 }
