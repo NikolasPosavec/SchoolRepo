@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MethodsCalculatorNP",
+            "request": "launch",
+            "mainClass": "MethodsCalculatorNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "TelephoneNumberNP",
             "request": "launch",
             "mainClass": "TelephoneNumberNP",
