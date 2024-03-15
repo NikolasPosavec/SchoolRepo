@@ -4,7 +4,7 @@ public class MethodsCalculatorNP {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Which calculator would you like to use? 1: Quadratic equation 2: System of equations 3: Perfect square trinomial");
+        System.out.println("Select a calculator: 1: Quadratic equation 2: System of equations 3: Perfect square trinomial");
         int calcop = sc.nextInt();
 
         switch (calcop) {
