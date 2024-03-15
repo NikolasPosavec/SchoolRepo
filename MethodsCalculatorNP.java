@@ -4,7 +4,11 @@ public class MethodsCalculatorNP {
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        System.out.println("Select a calculator: 1: Quadratic equation 2: System of equations 3: Perfect square trinomial");
+        System.out.println("Select a calculator: ");
+        System.out.println("1: Quadratic equation");
+        System.out.println("2: System of equations");
+        System.out.println("3: Perfect square trinomial");
+        System.out.println("4: Circles");
         int calcop = sc.nextInt();
 
         switch (calcop) {
@@ -17,8 +21,11 @@ public class MethodsCalculatorNP {
             case 3:
                 perfectSquareTrinomial();
                 break;
+            case 4:
+                Circles();
+                break;
             default:
-                System.out.println("Error: Not an option");
+                System.out.println("Invalid choice");
         }
     }
 
@@ -92,8 +99,64 @@ public class MethodsCalculatorNP {
         bb = roundToTwoDecimals(bb);
         System.out.println("Solution: " + axSquared + "x^2 + " + twoabx + "x + " + bb);
     }
+    public static void Circles() {
+        System.out.println("Which calculation would you like to perform?");
+        System.out.println("1: Calculate arc length");
+        System.out.println("2: Calculate central angle");
+        System.out.println("3: Calculate center of a circle");
+        int choice = sc.nextInt();
+
+        switch (choice) {
+            case 1:
+                calculateArcLength();
+                break;
+            case 2:
+                calculateCentralAngle();
+                break;
+            case 3:
+                calculateCircleCenter();
+                break;
+            default:
+                System.out.println("Invalid choice");
+        }
+    }
+    public static void calculateArcLength() {
+        System.out.print("Enter the angle (in radians): ");
+        double angleRadians = sc.nextDouble();
+        System.out.print("Enter the radius of the circle: ");
+        double radius = sc.nextDouble();
+        double arcLength = angleRadians * radius;
+        arcLength = roundToTwoDecimals(arcLength);
+        System.out.println("The arc length is: " + arcLength);
+    }
+    public static void calculateCentralAngle() {
+        System.out.print("Enter the arc length: ");
+        double arcLength = sc.nextDouble();
+        System.out.print("Enter the radius of the circle: ");
+        double radius = sc.nextDouble();
+        radius = roundToTwoDecimals(radius);
+        double centralAngle = arcLength / radius;
+        centralAngle = roundToTwoDecimals(centralAngle);
+        System.out.println("The central angle (in radians) is: " + centralAngle);
+    }
+    public static void calculateCircleCenter() {
+        System.out.println("Enter the coordinates of the endpoints of the diameter:");
+        System.out.print("x1: ");
+        double x1 = sc.nextDouble();
+        System.out.print("y1: ");
+        double y1 = sc.nextDouble();
+        System.out.print("x2: ");
+        double x2 = sc.nextDouble();
+        System.out.print("y2: ");
+        double y2 = sc.nextDouble();
+
+        double centerX = (x1 + x2) / 2;
+        double centerY = (y1 + y2) / 2;
+        centerX = roundToTwoDecimals(centerX);
+        centerY = roundToTwoDecimals(centerY);
+        System.out.println("The coordinates of the center of the circle are: (" + centerX + ", " + centerY + ")");
+    }
     public static double roundToTwoDecimals(double number) {
         return Math.round(number * 100.0) / 100.0;
     }
 }
-    
