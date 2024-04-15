@@ -88,6 +88,15 @@
         }
       
         void orderVeggie(){
+          if(myCheeseSupply<8){
+            supplyOrderCheese();
+            if(myDoughSupply<11){
+              supplyOrderDough();
+              if(myVeggieSupply<12){
+                supplyOrderVeggie();
+              }
+            }
+          }
           myNumVegPizzas++;
           myRevenue += 11;//veggie pizza price:$11
           myCheeseSupply -= 8;//cheese needed per veggie pizza
@@ -95,12 +104,39 @@
           myDoughSupply -= 11;
         }
 
+        void supplyOrderVeggie(){
+          if(myRevenue<25){
+            System.out.println("Too broke to order veggies, sorry!");
+          }else{
+            myPepperoniSupply += 125;
+            myRevenue -= 25;
+          }
+        }
+
         void orderKangaroo(){
+          if(myCheeseSupply<8){
+            supplyOrderCheese();
+            if(myDoughSupply<11){
+              supplyOrderDough();
+              if(myKangarooSupply<5){
+                supplyOrderVeggie();
+              }
+            }
+          }
           myNumKangPizzas++;
           myRevenue += 15;
           myCheeseSupply -= 8;
           myKangarooSupply -= 5;
           myDoughSupply -= 11;
+        }
+
+        void supplyOrderKangaroo(){
+          if(myRevenue<35){
+            System.out.println("Too broke to order kangaroo, sorry!");
+          }else{
+            myKangarooSupply += 125;
+            myRevenue -= 35;
+          }
         }
       
         int getNumCheesePizzas(){
