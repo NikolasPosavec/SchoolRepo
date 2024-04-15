@@ -51,13 +51,13 @@
             }
           }
           myNumCheesePizzas += num;
-          myRevenue += 8;// cheese pizza price:$8
-          myCheeseSupply -= 12;//cheese needed per cheese pizza
-          myDoughSupply -= 11;
+          myRevenue += 8*num;// cheese pizza price:$8
+          myCheeseSupply -= 12*num;//cheese needed per cheese pizza
+          myDoughSupply -= 11*num;
         }
 
         void supplyOrderCheese(){
-          if(myRevenue<35){
+          if(myRevenue+myOrigAcctBal<35){
             System.out.println("Too broke to order cheese, sorry!");
           }else{
             myCheeseSupply += 200;
@@ -66,7 +66,7 @@
         }
 
         void supplyOrderDough(){
-          if(myRevenue<35){
+          if(myRevenue+myOrigAcctBal<35){
             System.out.println("Too broke to order cheese, sorry!");
           }else{
             myDoughSupply += 200;
@@ -102,14 +102,14 @@
             }
           }
           myNumPeppPizzas += num;
-          myRevenue += 10;//pepperoni pizza price:$10
-          myCheeseSupply -= 8;//cheese needed per pepp pizza
-          myPepperoniSupply -= 6;//pepperoni needed per pepp pizza
-          myDoughSupply -= 11;
+          myRevenue += 10*num;//pepperoni pizza price:$10
+          myCheeseSupply -= 8*num;//cheese needed per pepp pizza
+          myPepperoniSupply -= 6*num;//pepperoni needed per pepp pizza
+          myDoughSupply -= 11*num;
         }
         
         void supplyOrderPep(){
-          if(myRevenue<30){
+          if(myRevenue+myOrigAcctBal<30){
             System.out.println("Too broke to order peporoni, sorry!");
           }else{
             myPepperoniSupply += 150;
@@ -145,14 +145,14 @@
             }
           }
           myNumVegPizzas += num;
-          myRevenue += 11;//veggie pizza price:$11
-          myCheeseSupply -= 8;//cheese needed per veggie pizza
-          myVeggieSupply -= 12;//veggies needed per veggie pizza
-          myDoughSupply -= 11;
+          myRevenue += 11*num;//veggie pizza price:$11
+          myCheeseSupply -= 8*num;//cheese needed per veggie pizza
+          myVeggieSupply -= 12*num;//veggies needed per veggie pizza
+          myDoughSupply -= 11*num;
         }
 
         void supplyOrderVeggie(){
-          if(myRevenue<25){
+          if(myRevenue+myOrigAcctBal<25){
             System.out.println("Too broke to order veggies, sorry!");
           }else{
             myPepperoniSupply += 125;
@@ -188,14 +188,14 @@
             }
           }
           myNumKangPizzas += num;
-          myRevenue += 15;
-          myCheeseSupply -= 8;
-          myKangarooSupply -= 5;
-          myDoughSupply -= 11;
+          myRevenue += 15*num;
+          myCheeseSupply -= 8*num;
+          myKangarooSupply -= 5*num;
+          myDoughSupply -= 11*num;
         }
 
         void supplyOrderKangaroo(){
-          if(myRevenue<35){
+          if(myRevenue+myOrigAcctBal<35){
             System.out.println("Too broke to order kangaroo, sorry!");
           }else{
             myKangarooSupply += 125;
