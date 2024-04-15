@@ -13,6 +13,7 @@
         private double myOrigAcctBal;//original bank account balance
         private int supplyOrderCheese;
         private int supplyOrderDough;
+        private int supplyOrderPep;
       
         // constructor
         PizzaParlor(){
@@ -61,11 +62,29 @@
         }
       
         void orderPepperoni(){
+          if(myCheeseSupply<8){
+            supplyOrderCheese();
+            if(myDoughSupply<11){
+              supplyOrderDough();
+              if(myPepperoniSupply<6){
+                supplyOrderPep();
+              }
+            }
+          }
           myNumPeppPizzas++;
           myRevenue += 10;//pepperoni pizza price:$10
           myCheeseSupply -= 8;//cheese needed per pepp pizza
           myPepperoniSupply -= 6;//pepperoni needed per pepp pizza
           myDoughSupply -= 11;
+        }
+        
+        void supplyOrderPep(){
+          if(myRevenue<30){
+            System.out.println("Too broke to order peporoni, sorry!");
+          }else{
+            myPepperoniSupply += 150;
+            myRevenue -= 30;
+          }
         }
       
         void orderVeggie(){
