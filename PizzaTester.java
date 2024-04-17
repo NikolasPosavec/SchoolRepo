@@ -1,3 +1,4 @@
+    import java.util.Scanner;
     class PizzaParlor{
         // instance variables
         private int myNumCheesePizzas; //# of cheese pizzas
@@ -24,6 +25,19 @@
           myPepperoniSupply = 200;
           myVeggieSupply = 200;
           myKangarooSupply = 100;
+          myRevenue = 0; 
+          myOrigAcctBal = 1000;
+          myDoughSupply = 400;
+        }
+        PizzaParlor(int cheese, int pep, int veg, int kang, int dough){
+          myNumCheesePizzas = 0;
+          myNumPeppPizzas = 0;
+          myNumVegPizzas = 0;
+          myCheeseSupply = cheese;
+          myPepperoniSupply = pep;
+          myVeggieSupply = veg;
+          myKangarooSupply = kang;
+          myDoughSupply = dough;
           myRevenue = 0; 
           myOrigAcctBal = 1000;
           myDoughSupply = 400;
@@ -67,7 +81,7 @@
 
         void supplyOrderDough(){
           if(myRevenue+myOrigAcctBal<35){
-            System.out.println("Too broke to order cheese, sorry!");
+            System.out.println("Too broke to order dough, sorry!");
           }else{
             myDoughSupply += 200;
             myRevenue -= 45;
@@ -202,6 +216,26 @@
             myRevenue -= 35;
           }
         }
+
+        public void setCheese (int num){
+          myCheeseSupply = num;
+        }
+        
+        public void setPep (int num){
+          myPepperoniSupply = num;
+        }
+
+        public void setVeg (int num){
+          myVeggieSupply = num;
+        }
+
+        public void setKang (int num){
+          myKangarooSupply = num;
+        }
+
+        public void setDough (int num){
+          myDoughSupply = num;
+        }
       
         int getNumCheesePizzas(){
           return myNumCheesePizzas;
@@ -246,6 +280,7 @@
         double getBankAccountBalance(){
           return myOrigAcctBal + myRevenue;
         }
+        
       }
       
       //-------------------- End of PizzaParlor class --------------------//
@@ -253,9 +288,37 @@
       
       public class PizzaTester{
         public static void main(String[] args){
-      
+          Scanner sc = new Scanner (System.in);
+
+          System.out.println("How much cheese would you like to start with?");
+          int cheese = sc.nextInt();
+          System.out.println("How much pepperoni would you like to start with?");
+          int pep = sc.nextInt();
+          System.out.println("How many veggies would you like to start with?");
+          int veg = sc.nextInt();
+          System.out.println("How much kangaroo would you like to start with?");
+          int kang = sc.nextInt();
+          System.out.println("How much dough would you like to start with?");
+          int dough = sc.nextInt();
           PizzaParlor diner = new PizzaParlor();
-          
+          diner.setCheese(cheese);
+          diner.setPep(pep);
+          diner.setVeg(veg);
+          diner.setKang(kang);
+          diner.setDough(dough);
+
+          System.out.println("How much cheese would you like to start with?");
+          int cheese1 = sc.nextInt();
+          System.out.println("How much pepperoni would you like to start with?");
+          int pep1 = sc.nextInt();
+          System.out.println("How many veggies would you like to start with?");
+          int veg1 = sc.nextInt();
+          System.out.println("How much kangaroo would you like to start with?");
+          int kang1 = sc.nextInt();
+          System.out.println("How much dough would you like to start with?");
+          int dough1 = sc.nextInt();
+          PizzaParlor diner2 = new PizzaParlor(cheese1, pep1, veg1, kang1, dough1 );
+
           diner.orderCheese();
           diner.orderKangaroo();
           diner.orderPepperoni();
