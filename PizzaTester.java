@@ -280,6 +280,21 @@
         double getBankAccountBalance(){
           return myOrigAcctBal + myRevenue;
         }
+        public String toString() {
+          return "PizzaParlor Status: " +
+                  "myNumCheesePizzas=" + myNumCheesePizzas +
+                  ", myNumPeppPizzas=" + myNumPeppPizzas +
+                  ", myNumVegPizzas=" + myNumVegPizzas +
+                  ", myNumKangPizzas=" + myNumKangPizzas +
+                  ", myCheeseSupply=" + myCheeseSupply +
+                  ", myPepperoniSupply=" + myPepperoniSupply +
+                  ", myVeggieSupply=" + myVeggieSupply +
+                  ", myKangarooSupply=" + myKangarooSupply +
+                  ", myDoughSupply=" + myDoughSupply +
+                  ", myRevenue=" + myRevenue +
+                  ", myOrigAcctBal=" + myOrigAcctBal 
+                  ;
+      }
         
       }
       
@@ -290,70 +305,76 @@
         public static void main(String[] args){
           Scanner sc = new Scanner (System.in);
 
-          System.out.println("How much cheese would you like to start with?");
-          int cheese = sc.nextInt();
-          System.out.println("How much pepperoni would you like to start with?");
-          int pep = sc.nextInt();
-          System.out.println("How many veggies would you like to start with?");
-          int veg = sc.nextInt();
-          System.out.println("How much kangaroo would you like to start with?");
-          int kang = sc.nextInt();
-          System.out.println("How much dough would you like to start with?");
-          int dough = sc.nextInt();
-          PizzaParlor diner = new PizzaParlor();
-          diner.setCheese(cheese);
-          diner.setPep(pep);
-          diner.setVeg(veg);
-          diner.setKang(kang);
-          diner.setDough(dough);
+          System.out.println("Which pizza parlor would you like to visit, 1 or 2? (If you would like to order many pizzas go with parlor 2)");
+          int test = sc.nextInt();
+          
+          switch(test){
+            case 1:
+            System.out.println("How much cheese would you like to start with?");
+            int cheese = sc.nextInt();
+            System.out.println("How much pepperoni would you like to start with?");
+            int pep = sc.nextInt();
+            System.out.println("How many veggies would you like to start with?");
+            int veg = sc.nextInt();
+            System.out.println("How much kangaroo would you like to start with?");
+            int kang = sc.nextInt();
+            System.out.println("How much dough would you like to start with?");
+            int dough = sc.nextInt();
+          
+            PizzaParlor diner = new PizzaParlor();
+            diner.setCheese(cheese);
+            diner.setPep(pep);
+            diner.setVeg(veg);
+            diner.setKang(kang);
+            diner.setDough(dough);
+            
+            diner.orderCheese();
+            diner.orderKangaroo();
+            diner.orderPepperoni();
+            diner.orderCheese();
+            diner.orderPepperoni();
+            diner.orderVeggie();
+            diner.orderCheese();
+            diner.orderVeggie();
+            diner.orderKangaroo();
+            diner.orderCheese();
+            diner.orderKangaroo(5);
 
-          System.out.println("How much cheese would you like to start with?");
-          int cheese1 = sc.nextInt();
-          System.out.println("How much pepperoni would you like to start with?");
-          int pep1 = sc.nextInt();
-          System.out.println("How many veggies would you like to start with?");
-          int veg1 = sc.nextInt();
-          System.out.println("How much kangaroo would you like to start with?");
-          int kang1 = sc.nextInt();
-          System.out.println("How much dough would you like to start with?");
-          int dough1 = sc.nextInt();
-          PizzaParlor diner2 = new PizzaParlor(cheese1, pep1, veg1, kang1, dough1 );
+            System.out.println(diner.toString());
+            break; 
 
-          diner.orderCheese();
-          diner.orderKangaroo();
-          diner.orderPepperoni();
-          diner.orderCheese();
-          diner.orderPepperoni();
-          diner.orderVeggie();
-          diner.orderCheese();
-          diner.orderVeggie();
-          diner.orderKangaroo();
-          diner.orderCheese();
-          diner.orderKangaroo(5);
-      
-          System.out.println("# of Cheese ordered is " 
-            + diner.getNumCheesePizzas());
-          System.out.println("# of Pepperoni ordered is " 
-            + diner.getNumPepperoniPizzas());
-          System.out.println("# of Veggie ordered is " 
-            + diner.getNumVeggiePizzas());
-          System.out.println("# of Kangaroo ordered is " 
-            + diner.getNumKangPizzas());
-      
-          System.out.print("\nRemaining supply of cheese in ounces is: ");
-          System.out.println(diner.getCheeseSupply());
-          System.out.print("Remaining supply of pepperoni in ounces is: ");
-          System.out.println(diner.getPepperoniSupply());
-          System.out.print("Remaining supply of veggies in ounces is: ");
-          System.out.println(diner.getVeggieSupply());
-          System.out.print("Remaining supply of kangaroo in ounces is: ");
-          System.out.println(diner.getKangarooSupply());
-          System.out.print("Remaining supply of dough in ounces is: ");
-          System.out.println(diner.getDoughSupply());
-      
-          System.out.println("\nRevenue is $" + diner.getRevenueTotal());
-          System.out.println("Bank balance is now $" 
-            + diner.getBankAccountBalance());
+            case 2:
+            System.out.println("How much cheese would you like to start with?");
+            int cheese1 = sc.nextInt();
+            System.out.println("How much pepperoni would you like to start with?");
+            int pep1 = sc.nextInt();
+            System.out.println("How many veggies would you like to start with?");
+            int veg1 = sc.nextInt();
+            System.out.println("How much kangaroo would you like to start with?");
+            int kang1 = sc.nextInt();
+            System.out.println("How much dough would you like to start with?");
+            int dough1 = sc.nextInt();
+            PizzaParlor diner2 = new PizzaParlor(cheese1, pep1, veg1, kang1, dough1 );
+            
+            diner2.orderCheese();
+            diner2.orderKangaroo();
+            diner2.orderPepperoni();
+            diner2.orderCheese();
+            diner2.orderPepperoni();
+            diner2.orderVeggie();
+            diner2.orderCheese();
+            diner2.orderVeggie();
+            diner2.orderKangaroo();
+            diner2.orderCheese();
+            diner2.orderKangaroo(5);
+
+            System.out.println(diner2.toString());
+            break;
+
+          }
+          
+        
+          
         }
       }
       

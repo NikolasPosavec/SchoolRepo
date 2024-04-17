@@ -1,23 +1,28 @@
 import java.util.Scanner;
+import javax.swing.*;
+import java.awt.*;
 
 
 public class TEST {
     public static void main(String[] args){
-        boolean answer = findPair(4,12,4);
-    }
-    public static boolean findPair(int first, int second, int third) {
-        boolean answer = true;
-        if(first==second || first==third || second==third){
-            answer = true;
-            if(first==second || first==third){
-                System.out.println(first);
-            }else{
-                System.out.println(second);
-            return;
-
-        }
-        
-    }
-
     
+    JFrame frame = new JFrame();
+    JPanel panel = new JPanel(new FlowLayout());
+    JButton cheesePizzaButton = new JButton("Cheese Pizza");
+    JButton pepPizzaButton = new JButton("Pepperoni Pizza");
+    JButton vegPizzaButton = new JButton("Veggie Pizza");
+    JButton kangPizzaButton = new JButton("Kangaroo Pizza");
+
+    panel.add(cheesePizzaButton);
+    panel.add(pepPizzaButton);
+    panel.add(vegPizzaButton);
+    panel.add(kangPizzaButton);
+
+    frame.add(panel);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(400,400);
+    frame.setLocationRelativeTo(null);
+    frame.setVisible(true);
+    
+    }
 }
