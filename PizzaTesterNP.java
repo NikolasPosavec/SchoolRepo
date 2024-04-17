@@ -282,18 +282,18 @@
         }
         public String toString() {
           return "PizzaParlor Status: " +
-                  "\n NumCheesePizzas=" + myNumCheesePizzas +
-                  "\n NumPeppPizzas=" + myNumPeppPizzas +
-                  "\n NumVegPizzas=" + myNumVegPizzas +
-                  "\n NumKangPizzas=" + myNumKangPizzas +
-                  "\n CheeseSupply=" + myCheeseSupply +
-                  "\n PepperoniSupply=" + myPepperoniSupply +
-                  "\n VeggieSupply=" + myVeggieSupply +
-                  "\n KangarooSupply=" + myKangarooSupply +
-                  "\n DoughSupply=" + myDoughSupply +
+                  "\n Number of Cheese Pizzas Ordered=" + myNumCheesePizzas +
+                  "\n Number of Pepperoni Pizzas Ordered=" + myNumPeppPizzas +
+                  "\n Number of Veggie Pizzas Ordered=" + myNumVegPizzas +
+                  "\n Number of Kangaroo Pizzas Ordered=" + myNumKangPizzas +
+                  "\n Remaining Cheese Supply=" + myCheeseSupply +
+                  "\n Remaining Pepperoni Supply=" + myPepperoniSupply +
+                  "\n Remaining Veggie Supply=" + myVeggieSupply +
+                  "\n Remaining Kangaroo Supply=" + myKangarooSupply +
+                  "\n Remianing Dough Supply=" + myDoughSupply +
                   "\n Revenue=" + myRevenue +
-                  "\n OrigAcctBal=" + myOrigAcctBal +
-                  "\n FinalAcctBal=" + (myOrigAcctBal+myRevenue)
+                  "\n Original Account Balance=" + myOrigAcctBal +
+                  "\n Final Account Balance=" + (myOrigAcctBal+myRevenue)
                   ;
       }
         
@@ -302,7 +302,7 @@
       //-------------------- End of PizzaParlor class --------------------//
       
       
-      public class PizzaTester{
+      public class PizzaTesterNP{
         public static void main(String[] args){
           Scanner sc = new Scanner (System.in);
 

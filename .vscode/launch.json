@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PizzaTesterNP",
+            "request": "launch",
+            "mainClass": "PizzaTesterNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "PizzaTester",
             "request": "launch",
             "mainClass": "PizzaTester",
