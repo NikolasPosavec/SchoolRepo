@@ -282,17 +282,18 @@
         }
         public String toString() {
           return "PizzaParlor Status: " +
-                  "myNumCheesePizzas=" + myNumCheesePizzas +
-                  ", myNumPeppPizzas=" + myNumPeppPizzas +
-                  ", myNumVegPizzas=" + myNumVegPizzas +
-                  ", myNumKangPizzas=" + myNumKangPizzas +
-                  ", myCheeseSupply=" + myCheeseSupply +
-                  ", myPepperoniSupply=" + myPepperoniSupply +
-                  ", myVeggieSupply=" + myVeggieSupply +
-                  ", myKangarooSupply=" + myKangarooSupply +
-                  ", myDoughSupply=" + myDoughSupply +
-                  ", myRevenue=" + myRevenue +
-                  ", myOrigAcctBal=" + myOrigAcctBal 
+                  "\n NumCheesePizzas=" + myNumCheesePizzas +
+                  "\n NumPeppPizzas=" + myNumPeppPizzas +
+                  "\n NumVegPizzas=" + myNumVegPizzas +
+                  "\n NumKangPizzas=" + myNumKangPizzas +
+                  "\n CheeseSupply=" + myCheeseSupply +
+                  "\n PepperoniSupply=" + myPepperoniSupply +
+                  "\n VeggieSupply=" + myVeggieSupply +
+                  "\n KangarooSupply=" + myKangarooSupply +
+                  "\n DoughSupply=" + myDoughSupply +
+                  "\n Revenue=" + myRevenue +
+                  "\n OrigAcctBal=" + myOrigAcctBal +
+                  "\n FinalAcctBal=" + (myOrigAcctBal+myRevenue)
                   ;
       }
         
