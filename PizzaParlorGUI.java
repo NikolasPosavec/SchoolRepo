@@ -34,9 +34,10 @@ public class PizzaParlorGUI extends JFrame {
 
     private void openPizzaParlor(int parlorNumber) {
         JFrame parlorFrame = new JFrame("Pizza Parlor " + parlorNumber);
-        parlorFrame.setSize(400, 300);
         parlorFrame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        parlorFrame.setLayout(new GridLayout(9, 2));
+        
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
         JLabel cheeseLabel = new JLabel("Cheese Supply:");
         JLabel pepperoniLabel = new JLabel("Pepperoni Supply:");
@@ -48,37 +49,41 @@ public class PizzaParlorGUI extends JFrame {
         JLabel orderVegPizzaLabel = new JLabel("Number of Veggie Pizzas to Order:");
         JLabel orderKangLabel = new JLabel("Number of Kangaroo Pizzas to Order:");
 
-        JTextField cheeseField = new JTextField();
-        JTextField pepperoniField = new JTextField();
-        JTextField veggieField = new JTextField();
-        JTextField kangarooField = new JTextField();
-        JTextField doughField = new JTextField();
-        JTextField orderCheesePizzaField = new JTextField();
-        JTextField orderPepPizzaField = new JTextField();
-        JTextField orderVegPizzaField = new JTextField();
-        JTextField orderKangPizzaField = new JTextField();
+        JTextField cheeseField = new JTextField(10);
+        JTextField pepperoniField = new JTextField(10);
+        JTextField veggieField = new JTextField(10);
+        JTextField kangarooField = new JTextField(10);
+        JTextField doughField = new JTextField(10);
+        JTextField orderCheesePizzaField = new JTextField(10);
+        JTextField orderPepPizzaField = new JTextField(10);
+        JTextField orderVegPizzaField = new JTextField(10);
+        JTextField orderKangPizzaField = new JTextField(10);
 
         JButton setIngredientsButton = new JButton("Set Ingredients");
 
-        parlorFrame.add(cheeseLabel);
-        parlorFrame.add(cheeseField);
-        parlorFrame.add(pepperoniLabel);
-        parlorFrame.add(pepperoniField);
-        parlorFrame.add(veggieLabel);
-        parlorFrame.add(veggieField);
-        parlorFrame.add(kangarooLabel);
-        parlorFrame.add(kangarooField);
-        parlorFrame.add(doughLabel);
-        parlorFrame.add(doughField);
-        parlorFrame.add(orderCheesePizzaLabel);
-        parlorFrame.add(orderCheesePizzaField);
-        parlorFrame.add(orderPepPizzaLabel);
-        parlorFrame.add(orderPepPizzaField);
-        parlorFrame.add(orderVegPizzaLabel);
-        parlorFrame.add(orderVegPizzaField);
-        parlorFrame.add(orderKangLabel);
-        parlorFrame.add(orderKangPizzaField);
-        parlorFrame.add(setIngredientsButton);
+        // Add components to the panel
+        panel.add(cheeseLabel);
+        panel.add(cheeseField);
+        panel.add(pepperoniLabel);
+        panel.add(pepperoniField);
+        panel.add(veggieLabel);
+        panel.add(veggieField);
+        panel.add(kangarooLabel);
+        panel.add(kangarooField);
+        panel.add(doughLabel);
+        panel.add(doughField);
+        panel.add(orderCheesePizzaLabel);
+        panel.add(orderCheesePizzaField);
+        panel.add(orderPepPizzaLabel);
+        panel.add(orderPepPizzaField);
+        panel.add(orderVegPizzaLabel);
+        panel.add(orderVegPizzaField);
+        panel.add(orderKangLabel);
+        panel.add(orderKangPizzaField);
+        panel.add(setIngredientsButton);
+
+        // Add the panel to the frame
+        parlorFrame.add(panel);
 
         setIngredientsButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -94,20 +99,18 @@ public class PizzaParlorGUI extends JFrame {
 
                 PizzaParlor pizzaParlor = new PizzaParlor(cheese, pepperoni, veggies, kangaroo, dough);
 
-                // Order pizzas
                 pizzaParlor.orderCheese(numCheesePizzas);
                 pizzaParlor.orderPepperoni(numPepPizzas);
                 pizzaParlor.orderVeggie(numVegPizzas);
                 pizzaParlor.orderKangaroo(numKangPizzas);
 
-                // Display results
                 JOptionPane.showMessageDialog(null, pizzaParlor.toString());
 
-                // Close the current window
                 parlorFrame.dispose();
             }
         });
 
+        parlorFrame.pack();
         parlorFrame.setVisible(true);
     }
 
