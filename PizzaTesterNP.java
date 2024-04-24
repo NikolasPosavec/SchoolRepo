@@ -1,4 +1,7 @@
     import java.util.Scanner;
+    import javax.swing.*;
+    import java.awt.*;
+    import java.awt.event.*;
     class PizzaParlor{
         // instance variables
         private int myNumCheesePizzas; //# of cheese pizzas
@@ -304,6 +307,7 @@
       
       public class PizzaTesterNP{
         public static void main(String[] args){
+          
           Scanner sc = new Scanner (System.in);
 
           System.out.println("Which pizza parlor would you like to visit, 1 or 2? (If you would like to order many pizzas go with parlor 2)");

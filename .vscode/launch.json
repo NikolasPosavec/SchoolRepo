@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PizzaGUI",
+            "request": "launch",
+            "mainClass": "PizzaGUI",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "PizzaParlorGUI",
+            "request": "launch",
+            "mainClass": "PizzaParlorGUI",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "InteractivePromptApp",
+            "request": "launch",
+            "mainClass": "InteractivePromptApp",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "TESTP",
+            "request": "launch",
+            "mainClass": "TESTP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "PizzaParlorGuiNP",
+            "request": "launch",
+            "mainClass": "PizzaParlorGuiNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "PizzaTesterNP",
             "request": "launch",
             "mainClass": "PizzaTesterNP",
