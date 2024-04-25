@@ -3,23 +3,21 @@
     import java.awt.*;
     import java.awt.event.*;
     class PizzaParlor{
-        // instance variables
-        private int myNumCheesePizzas; //# of cheese pizzas
-        private int myNumPeppPizzas; // # of pepperoni pizzas
-        private int myNumVegPizzas; //# of veggie pizzas
+        private int myNumCheesePizzas; 
+        private int myNumPeppPizzas; 
+        private int myNumVegPizzas; 
         private int myNumKangPizzas;
-        private int myCheeseSupply; // ounces of cheese
-        private int myPepperoniSupply;// ounces of pepperoni
-        private int myVeggieSupply; // ounces of veggies
+        private int myCheeseSupply; 
+        private int myPepperoniSupply;
+        private int myVeggieSupply; 
         private int myKangarooSupply;
         private int myDoughSupply;
-        private double myRevenue; // dollars collected
-        private double myOrigAcctBal;//original bank account balance
+        private double myRevenue;
+        private double myOrigAcctBal;
         private int supplyOrderCheese;
         private int supplyOrderDough;
         private int supplyOrderPep;
-      
-        // constructor
+ 
         PizzaParlor(){
           myNumCheesePizzas = 0;
           myNumPeppPizzas = 0;
@@ -46,7 +44,6 @@
           myDoughSupply = 400;
         }
       
-        // methods
         void orderCheese(){
           if(myCheeseSupply<12){
             supplyOrderCheese();
@@ -55,8 +52,8 @@
             }
           }
           myNumCheesePizzas++;
-          myRevenue += 8;// cheese pizza price:$8
-          myCheeseSupply -= 12;//cheese needed per cheese pizza
+          myRevenue += 8;
+          myCheeseSupply -= 12;
           myDoughSupply -= 11;
         }
         
@@ -68,8 +65,8 @@
             }
           }
           myNumCheesePizzas += num;
-          myRevenue += 8*num;// cheese pizza price:$8
-          myCheeseSupply -= 12*num;//cheese needed per cheese pizza
+          myRevenue += 8*num;
+          myCheeseSupply -= 12*num;
           myDoughSupply -= 11*num;
         }
 
@@ -102,9 +99,9 @@
             }
           }
           myNumPeppPizzas++;
-          myRevenue += 10;//pepperoni pizza price:$10
-          myCheeseSupply -= 8;//cheese needed per pepp pizza
-          myPepperoniSupply -= 6;//pepperoni needed per pepp pizza
+          myRevenue += 10;
+          myCheeseSupply -= 8;
+          myPepperoniSupply -= 6;
           myDoughSupply -= 11;
         }
 
@@ -119,9 +116,9 @@
             }
           }
           myNumPeppPizzas += num;
-          myRevenue += 10*num;//pepperoni pizza price:$10
-          myCheeseSupply -= 8*num;//cheese needed per pepp pizza
-          myPepperoniSupply -= 6*num;//pepperoni needed per pepp pizza
+          myRevenue += 10*num;
+          myCheeseSupply -= 8*num;
+          myPepperoniSupply -= 6*num;
           myDoughSupply -= 11*num;
         }
         
@@ -145,9 +142,9 @@
             }
           }
           myNumVegPizzas++;
-          myRevenue += 11;//veggie pizza price:$11
-          myCheeseSupply -= 8;//cheese needed per veggie pizza
-          myVeggieSupply -= 12;//veggies needed per veggie pizza
+          myRevenue += 11;
+          myCheeseSupply -= 8;
+          myVeggieSupply -= 12;
           myDoughSupply -= 11;
         }
         
@@ -162,9 +159,9 @@
             }
           }
           myNumVegPizzas += num;
-          myRevenue += 11*num;//veggie pizza price:$11
-          myCheeseSupply -= 8*num;//cheese needed per veggie pizza
-          myVeggieSupply -= 12*num;//veggies needed per veggie pizza
+          myRevenue += 11*num;
+          myCheeseSupply -= 8*num;
+          myVeggieSupply -= 12*num;
           myDoughSupply -= 11*num;
         }
 
