@@ -8,12 +8,12 @@ class PiggyBank {
     private int coinTotalValue;
     private int amountOfEachCoin;
     
-    PiggyBank(int totval){
+    PiggyBank(int totval, int pens, int nicks, int dims, int quarts){
         coinTotalValue = totval;
-        pennies = 0;
-        nickels = 0;
-        dimes = 0;
-        quarters = 0;
+        pennies = pens;
+        nickels = nicks;
+        dimes = dims;
+        quarters = quarts;
     }
     PiggyBank(int pens, int nicks, int dimes1, int quarts){
         pennies = pens;
@@ -59,8 +59,12 @@ class PiggyBank {
     }
 
     public String toString(){
-        System.out.println("You have " + pennies + " pennies, " + nickels + " nickels, "+ dimes + " dimes, and" + quarters + " quarters.");
-        System.out.println("Your piggybank has a value of " + coinTotalValue + "dollars");
+        return ("You have " + pennies + " pennies, " + nickels + " nickels, "+ dimes + " dimes, and" + quarters + " quarters." 
+               + "Your piggybank has a value of " + coinTotalValue + "dollars");
+    }
+
+    public String toString2(){
+        return ("You have " + quarters + " quarters, " + dimes + " dimes, " + nickels + " nickels, " + "and " + pennies + " pennies.");
     }
 }
 
@@ -68,20 +72,21 @@ class PiggyBank {
         public static void main(String[] args){
             Scanner sc = new Scanner(System.in);
             
-            System.out.println("Would you like to start with a cent value (type 0) or do you want to set your amount(type 1)?");
+            System.out.println("Would you like to start with a cent value (type 0) or do you want to set your own value for each coin type(type 1)?");
             int bankchoice = sc.nextInt();
 
             switch (bankchoice) {
                 case 0:
                     System.out.println("What is the total value of coins in cents?");
                     int coinVal = sc.nextInt();
-                    PiggyBank bank1 = new PiggyBank(coinVal);
+                    int pennies = 0;
+                    int nickels = 0;
+                    int dimes = 0;
+                    int quarters = 0;
+                    PiggyBank bank1 = new PiggyBank(coinVal, pennies, nickels, dimes, quarters);
                     bank1.sortCoins();
-
-                    System.out.println("You have " + quarters + " quarters, " + dimes " dimes, " + nickels + " nickels, " + "and " + pennies + " pennies.");
-
-                    }
-            
+                    System.out.println(bank1.toString2());
+                    break;
                 case 1:
                     System.out.println("How many pennies would you like to add to the bank?");
                     int pens = sc.nextInt();
@@ -95,8 +100,7 @@ class PiggyBank {
                     
                     double totalvalue1 = bank2.calcCoins();
 
-                    System.out.println("You have " + pens + " pennies, " + nicks + " nickels, "+ dimes1 + " dimes, and" + quarts + " quarters.");
-                    System.out.println("Your piggybank has a value of " + totalvalue1 + "dollars");
+                    System.out.println(bank2.toString());
                     break;
             }
 
