@@ -88,7 +88,7 @@ class PiggyBank {
                     PiggyBank bank1 = new PiggyBank(coinVal, pennies, nickels, dimes, quarters);
                     bank1.sortCoins();
                     System.out.println(bank1.toString2());
-                    System.out.println("Would you like to add more (type 0) or exit (type 1)?")
+                    System.out.println("Would you like to add more (type 0) or exit (type 1)?");
                     int numcheck = sc.nextInt();
                     if(numcheck==1){
                         checker = false;
@@ -109,7 +109,7 @@ class PiggyBank {
                     PiggyBank bank2 = new PiggyBank(pens, nicks, dimes1, quarts);
                     double totalvalue1 = bank2.calcCoins();
                     System.out.println(bank2.toString());
-                    System.out.println("Would you like to add more (type 0) or exit (type 1)?")
+                    System.out.println("Would you like to add more (type 0) or exit (type 1)?");
                     int numcheck = sc.nextInt();
                     if(numcheck==1){
                         checker = false;
@@ -119,5 +119,5 @@ class PiggyBank {
 
         
 
-        }
+        
     
