@@ -77,7 +77,7 @@ class PiggyBank {
 
             switch (bankchoice) {
                 case 0:
-                    while(checker==true){
+                    while(checker){
                     boolean checker = true;
                     System.out.println("What is the total value of coins in cents?");
                     int coinVal = sc.nextInt();
@@ -96,7 +96,7 @@ class PiggyBank {
                 }
                     break;
                 case 1:
-                    while(checker1==true){
+                    while(checker1){
                     boolean checker1 = true;
                     System.out.println("How many pennies would you like to add to the bank?");
                     int pens = sc.nextInt();
@@ -110,9 +110,10 @@ class PiggyBank {
                     double totalvalue1 = bank2.calcCoins();
                     System.out.println(bank2.toString());
                     System.out.println("Would you like to add more (type 0) or exit (type 1)?");
-                    int numcheck = sc.nextInt();
-                    if(numcheck==1){
-                        checker = false;
+                    int numcheck1 = sc.nextInt();
+                    if(numcheck1==1){
+                        checker1 = false;
+                    }
                     }
                     break;
             }
