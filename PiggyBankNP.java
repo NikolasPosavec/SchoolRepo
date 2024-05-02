@@ -151,6 +151,8 @@ public class PiggyBankNP {
                     }
                 }
                 break;
+            default:
+                System.out.println("Not a valid input, try again!");
             
         }
     }
