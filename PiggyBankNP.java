@@ -83,75 +83,36 @@ public class PiggyBankNP {
         int bankchoice = sc.nextInt();
         PiggyBank bank;
 
-        switch (bankchoice) {
-            case 0:
-                System.out.println("What is the total value of coins in cents?");
-                int coinVal = sc.nextInt();
-                int pennies = 0;
-                int nickels = 0;
-                int dimes = 0;
-                int quarters = 0;
-                bank = new PiggyBank(coinVal, pennies, nickels, dimes, quarters);
-                bank.sortCoins();
-                System.out.println(bank.toString2());
+            switch (bankchoice) {
+                case 0:
+                    System.out.println("What is the total value of coins in cents?");
+                    int coinVal = sc.nextInt();
+                    int pennies = 0;
+                    int nickels = 0;
+                    int dimes = 0;
+                    int quarters = 0;
+                    PiggyBank bank1 = new PiggyBank(coinVal, pennies, nickels, dimes, quarters);
+                    bank1.sortCoins();
+                    System.out.println(bank1.toString2());
+                    break;
+                case 1:
+                    System.out.println("How many pennies would you like to add to the bank?");
+                    int pens = sc.nextInt();
+                    System.out.println("How many nickels would you like to add to the bank?");
+                    int nicks = sc.nextInt();
+                    System.out.println("How many dimes would you like to add to the bank?");
+                    int dimes1 = sc.nextInt();
+                    System.out.println("How many quarters would you like to add to the bank?");
+                    int quarts = sc.nextInt();
+                    PiggyBank bank2 = new PiggyBank(pens, nicks, dimes1, quarts);
+                    
+                    double totalvalue1 = bank2.calcCoins();
 
-                boolean numchecker = true;
-                while (numchecker) {
-                    System.out.println("Would you like to add more (type 0) or exit (type 1)?");
-                    int numcheck = sc.nextInt();
-                    if (numcheck == 0) {
-                        System.out.println("How many pennies would you like to add to the bank?");
-                        int pens = sc.nextInt();
-                        System.out.println("How many nickels would you like to add to the bank?");
-                        int nicks = sc.nextInt();
-                        System.out.println("How many dimes would you like to add to the bank?");
-                        int dimes1 = sc.nextInt();
-                        System.out.println("How many quarters would you like to add to the bank?");
-                        int quarts = sc.nextInt();
-                        bank.addCoins(pens, nicks, dimes1, quarts);
-                        System.out.println(bank.toString2());
-                    } else if (numcheck == 1) {
-                        numchecker = false;
-                    }
-                }
-                break;
-            case 1:
-                System.out.println("How many pennies would you like to add to the bank?");
-                int pens1 = sc.nextInt();
-                System.out.println("How many nickels would you like to add to the bank?");
-                int nicks1 = sc.nextInt();
-                System.out.println("How many dimes would you like to add to the bank?");
-                int dimes11 = sc.nextInt();
-                System.out.println("How many quarters would you like to add to the bank?");
-                int quarts1 = sc.nextInt();
+                    System.out.println(bank2.toString());
+                    break;
+            }
 
-                bank = new PiggyBank(pens1, nicks1, dimes11, quarts1);
-                double totalvalue11 = bank.calcCoins();
-                System.out.println(bank.toString());
-            
-                boolean numchecker1 = true;
-                while (numchecker1) {
-                    System.out.println("Would you like to add more (type 0) or exit (type 1)?");
-                    int numcheck1 = sc.nextInt();
-                    if (numcheck1 == 0) {
-                        System.out.println("How many pennies would you like to add to the bank?");
-                        int pens = sc.nextInt();
-                        System.out.println("How many nickels would you like to add to the bank?");
-                        int nicks = sc.nextInt();
-                        System.out.println("How many dimes would you like to add to the bank?");
-                        int dimes1 = sc.nextInt();
-                        System.out.println("How many quarters would you like to add to the bank?");
-                        int quarts = sc.nextInt();
-                
-                        bank.addCoins(pens, nicks, dimes1, quarts);
-                        double totalvalue1 = bank.calcCoins();
-                        System.out.println(bank.toString());
-                    } else if (numcheck1 == 1) {
-                        numchecker1 = false;
-                    }
-                }
-                break;
-            
+        
+
         }
     }
-}
