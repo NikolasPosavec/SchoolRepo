@@ -42,4 +42,37 @@ public double getPrice(){
 public void setPrice(double price){
     this.price = price;
 }
+public static void displayFootwearInfo(FootwearSuper footwear) {
+    System.out.println("Brand: " + footwear.getBrand());
+    System.out.println("Size: " + footwear.getSize());
+    System.out.println("Color: " + footwear.getColor());
+    System.out.println("Price: $" + footwear.getPrice());
+    if (footwear instanceof Shoes) {
+        Shoes shoes = (Shoes) footwear;
+        System.out.println("Material: " + shoes.getMaterial());
+        System.out.println("Has Laces: " + shoes.hasLaces());
+    } else if (footwear instanceof Sneakers) {
+        Sneakers sneakers = (Sneakers) footwear;
+        System.out.println("Material: " + sneakers.getMaterial());
+        System.out.println("Has Laces: " + sneakers.hasLaces());
+        System.out.println("Has Arch Support: " + sneakers.hasArchSupport());
+    } else if (footwear instanceof Boots) {
+        Boots boots = (Boots) footwear;
+        System.out.println("Material: " + boots.getMaterial());
+        System.out.println("Has Laces: " + boots.hasLaces());
+        System.out.println("Height: " + boots.getHeight() + " inches");
+    } else if (footwear instanceof Sandals) {
+        Sandals sandals = (Sandals) footwear;
+        System.out.println("Has Straps: " + sandals.hasStraps());
+    } else if (footwear instanceof Slides) {
+        Slides slides = (Slides) footwear;
+        System.out.println("Has Straps: " + slides.hasStraps());
+        System.out.println("Has Back Strap: " + slides.hasBackStrap());
+    } else if (footwear instanceof FlipFlops) {
+        FlipFlops flipFlops = (FlipFlops) footwear;
+        System.out.println("Is Waterproof: " + flipFlops.isWaterproof());
+        System.out.println("Has Straps: " + flipFlops.hasStraps());
+    }
+    System.out.println();
+}
 }
