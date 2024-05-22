@@ -1,4 +1,4 @@
-package FinalProjectNP;
+
 
 public class Slides extends Sandals{
     private boolean hasBackStrap;
@@ -7,8 +7,8 @@ public Slides(){
     super();
     this.hasBackStrap = false;
 }
-public Slides(String brand, double size, String color, boolean hasStraps, boolean hasBackStrap){
-    super(brand, size, color, hasStraps);
+public Slides(String brand, double size, String color, double price, boolean hasStraps, boolean hasBackStrap){
+    super(brand, size, color, price, hasStraps);
     this.hasBackStrap = hasBackStrap;
 }
 

@@ -1,5 +1,3 @@
-package FinalProjectNP;
-
 public class FlipFlops extends Sandals{
     private boolean waterproof;
 
@@ -7,8 +5,8 @@ public FlipFlops(){
     super();
     this.waterproof = false;
 }
-public FlipFlops(String brand, double size, String color, boolean hasStraps, boolean waterproof){
-    super(brand, size, color, hasStraps);
+public FlipFlops(String brand, double size, String color, double price, boolean hasStraps, boolean waterproof){
+    super(brand, size, color, price, hasStraps);
     this.waterproof = waterproof;
 }
 

@@ -1,4 +1,4 @@
-package FinalProjectNP;
+
 
 public class Sneakers extends Shoes{
     private boolean hasArchSupport;
@@ -7,8 +7,8 @@ public Sneakers(){
     super();
     hasArchSupport = true;
 }
-public Sneakers(String brand, double size, String color, String material, boolean laces, boolean hasArchSupport){
-    super(brand, size, color, material, laces);
+public Sneakers(String brand, double size, String color, double price, String material, boolean laces, boolean hasArchSupport){
+    super(brand, size, color, price, material, laces);
     this.hasArchSupport = hasArchSupport;
 }
 

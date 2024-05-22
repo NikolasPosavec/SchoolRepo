@@ -1,4 +1,4 @@
-package FinalProjectNP;
+
 
 public class Shoes extends FootWearSuper {
     private String material;
@@ -9,8 +9,8 @@ public Shoes(){
     this.material = "unknown";
     this.laces = true;
 }
-public Shoes(String brand, double size, String color, String material, boolean laces){
-    super(brand, size, color);
+public Shoes(String brand, double size, String color, double price, String material, boolean laces){
+    super(brand, size, color, price);
     this.material = material;
     this.laces = laces;
 }

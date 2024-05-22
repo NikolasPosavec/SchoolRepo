@@ -1,4 +1,4 @@
-package FinalProjectNP;
+
 
 public class Boots extends Shoes{
     private int height;
@@ -7,8 +7,8 @@ public Boots(){
     super();
     this.height = 0;
 }
-public Boots(String brand, double size, String color, String material, boolean laces, int height){
-    super(brand, size, color, material, laces);
+public Boots(String brand, double size, String color, double price, String material, boolean laces, int height){
+    super(brand, size, color, price, material, laces);
     this.height = height;
 }
 

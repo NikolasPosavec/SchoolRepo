@@ -1,4 +1,3 @@
-package FinalProjectNP;
 
 public class Sandals extends FootWearSuper{
     private boolean hasStraps;
@@ -7,8 +6,8 @@ public Sandals(){
     super();
     this.hasStraps = true;
 }
-public Sandals(String brand, double size, String color, boolean hasStraps){
-    super(brand, size, color);
+public Sandals(String brand, double size, String color, double price, boolean hasStraps){
+    super(brand, size, color, price);
     this.hasStraps = hasStraps;
 }
 
