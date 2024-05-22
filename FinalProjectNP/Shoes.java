@@ -27,4 +27,18 @@ public boolean hasLaces(){
 public void setLaces(boolean laces){
     this.laces = laces;
 }
+@Override
+public double getPrice() {
+    double basePrice = super.getPrice();
+    double materialCost = 0;
+
+    if (material.equals("leather")) {
+        materialCost = 20;
+    } else if (material.equals("canvas")) {
+        materialCost = 10;
+    }
+    
+    double lacesCost = laces ? 5 : 0;
+    return basePrice + materialCost + lacesCost;
+}
 }

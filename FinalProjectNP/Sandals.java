@@ -18,4 +18,10 @@ public boolean hasStraps(){
 public void hasStraps(boolean hasStraps){
     this.hasStraps = hasStraps;
 }
+@Override
+public double getPrice() {
+    double basePrice = super.getPrice();
+    double strapsCost = hasStraps ? 5 : 0;
+    return basePrice + strapsCost;
+}
 }

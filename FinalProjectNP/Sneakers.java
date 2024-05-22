@@ -18,5 +18,10 @@ public boolean hasArchSupport(){
 public void setHasArchSupport(boolean hasArchSupport){
     this.hasArchSupport = hasArchSupport;
 }
-    
+@Override
+public double getPrice() {
+    double basePrice = super.getPrice();
+    double archSupportCost = hasArchSupport ? 10 : 0; 
+    return basePrice + archSupportCost;
+}
 }
