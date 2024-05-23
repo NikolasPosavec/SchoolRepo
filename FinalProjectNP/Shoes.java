@@ -41,4 +41,16 @@ public double getPrice() {
     double lacesCost = laces ? 5 : 0;
     return basePrice + materialCost + lacesCost;
 }
+@Override
+public String toString() {
+    return "Shoes{" +
+            "brand='" + getBrand() + '\'' +
+            ", size=" + getSize() +
+            ", color='" + getColor() + '\'' +
+            ", price=" + getPrice() +
+            ", material='" + material + '\'' +
+            ", laces=" + laces +
+            '}';
+}
+
 }

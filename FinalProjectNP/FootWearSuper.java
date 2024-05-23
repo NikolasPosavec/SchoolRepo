@@ -42,5 +42,14 @@ public double getPrice(){
 public void setPrice(double price){
     this.price = price;
 }
+@Override
+public String toString() {
+    return "FootWearSuper{" +
+            "brand='" + brand + '\'' +
+            ", size=" + size +
+            ", color='" + color + '\'' +
+            ", price=" + price +
+            '}';
+}
 
 }

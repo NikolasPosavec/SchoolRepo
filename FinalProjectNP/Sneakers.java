@@ -24,4 +24,17 @@ public double getPrice() {
     double archSupportCost = hasArchSupport ? 10 : 0; 
     return basePrice + archSupportCost;
 }
+@Override
+public String toString() {
+    return "Sneakers{" +
+            "brand='" + getBrand() + '\'' +
+            ", size=" + getSize() +
+            ", color='" + getColor() + '\'' +
+            ", price=" + getPrice() +
+            ", material='" + getMaterial() + '\'' +
+            ", laces=" + hasLaces() +
+            ", hasArchSupport=" + hasArchSupport +
+            '}';
+}
+
 }

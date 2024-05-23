@@ -27,4 +27,17 @@ public double getPrice() {
         return basePrice;
     }
 }
+@Override
+public String toString() {
+    return "Boots{" +
+            "brand='" + getBrand() + '\'' +
+            ", size=" + getSize() +
+            ", color='" + getColor() + '\'' +
+            ", price=" + getPrice() +
+            ", material='" + getMaterial() + '\'' +
+            ", laces=" + hasLaces() +
+            ", height=" + height +
+            '}';
+}
+
 }

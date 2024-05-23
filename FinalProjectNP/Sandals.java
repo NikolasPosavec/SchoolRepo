@@ -23,5 +23,15 @@ public double getPrice() {
     double strapsCost = hasStraps ? 5 : 0;
     return basePrice + strapsCost;
 }
+@Override
+public String toString() {
+    return "Sandals{" +
+            "brand='" + getBrand() + '\'' +
+            ", size=" + getSize() +
+            ", color='" + getColor() + '\'' +
+            ", price=" + getPrice() +
+            ", hasStraps=" + hasStraps +
+            '}';
+}
 
 }

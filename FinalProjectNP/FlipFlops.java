@@ -22,4 +22,16 @@ public double getPrice() {
     double waterproofCost = waterproof ? 10 : 0; 
     return basePrice + waterproofCost;
 }
+@Override
+public String toString() {
+    return "FlipFlops{" +
+            "brand='" + getBrand() + '\'' +
+            ", size=" + getSize() +
+            ", color='" + getColor() + '\'' +
+            ", price=" + getPrice() +
+            ", hasStraps=" + hasStraps() +
+            ", waterproof=" + waterproof +
+            '}';
+}
+
 }

@@ -24,4 +24,16 @@ public double getPrice() {
     double backStrapCost = hasBackStrap ? 3 : 0;
     return basePrice + backStrapCost;
 }
+@Override
+public String toString() {
+    return "Slides{" +
+            "brand='" + getBrand() + '\'' +
+            ", size=" + getSize() +
+            ", color='" + getColor() + '\'' +
+            ", price=" + getPrice() +
+            ", hasStraps=" + hasStraps() +
+            ", hasBackStrap=" + hasBackStrap +
+            '}';
+}
+
 }
