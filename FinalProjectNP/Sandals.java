@@ -23,4 +23,5 @@ public double getPrice() {
     double strapsCost = hasStraps ? 5 : 0;
     return basePrice + strapsCost;
 }
+
 }

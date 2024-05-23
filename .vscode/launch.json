@@ -8,6 +8,13 @@
             "type": "java",
             "name": "FinalProjectTesterNP",
             "request": "launch",
+            "mainClass": "FinalProjectTesterNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "FinalProjectTesterNP",
+            "request": "launch",
             "mainClass": "FinalProjectNP.FinalProjectTesterNP",
             "projectName": "SchoolRepo_dfae92c2"
         },
