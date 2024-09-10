@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "FirstThreePrograms",
+            "request": "launch",
+            "mainClass": "FirstThreePrograms",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "FirstThreePrograms",
+            "request": "launch",
+            "mainClass": "APCS.FirstThreePrograms",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "FinalProjectTesterNP",
             "request": "launch",
             "mainClass": "FinalProjectTesterNP",
