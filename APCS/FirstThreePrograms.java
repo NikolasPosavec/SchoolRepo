@@ -32,6 +32,18 @@ public class FirstThreePrograms
             int N = sc.nextInt();
             double piFour = LeibnizFormPi(N);
             System.out.println(piFour);
+            break;
+            case 3:
+            System.out.println("2^x? (Type in your x value)");
+            int P = sc.nextInt();
+            int finalPow = powsOfTwo(P);
+            if(finalPow == -1)
+            {
+                System.out.println("Invalid input, try again.");
+            } else {
+                System.out.println("2^" + P + " = " + finalPow);
+            }
+            break;
         }
     }   
 
@@ -72,21 +84,43 @@ public static boolean rightTriangle(int firstSide, int secondSide, int thirdSide
 
 public static double LeibnizFormPi(int N)
 {
-    double piDivFour = 0;
-    double numberAtN;
-    for(int i = 0; i <= N; i++)
+    double piDivFour = 0; //this is what tryna find
+    double numberAtN; //gonna use this to add up each value to piDivFour
+    for(int i = 0; i <= N; i++) //basically im just sayin that i = k and N is the limit
     {
-        double topTerm = 0.0;
+        double topTerm = 0.0; //trying to figure out if topTerm is -1 or 1 -> (-1)^k
         if(i % 2 == 0)
         {
             topTerm = 1;
         } else {
             topTerm = -1;
         }
-        numberAtN = topTerm/((2*i)+1);
-        piDivFour += numberAtN;
+        numberAtN = topTerm/((2*i)+1); //now im just sayin that the value at term N is ____
+        piDivFour += numberAtN; //continue to add up cus its inf series
     }
     return piDivFour;
 }
+
+public static int powsOfTwo (int N)
+{
+    if(N < 0){ //sentinel value checker
+        return -1;
+    }
+    int powOfTwo = 1; //start at 1 because 2^0 = 1 and 0 is lowest allowed value
+    int i = 1; //LCV for outer while loop
+    int j = 1; //LCV for inner while loop
+    
+    while(i <= N) 
+    {
+        i++; //Increment outer loop counter
+        
+        while(j < i) 
+        {
+            j++; //Increment inner loop counter
+            powOfTwo *= 2;
+        }
+    }
+    return powOfTwo;
 }
 
+}
