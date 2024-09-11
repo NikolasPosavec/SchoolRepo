@@ -1,5 +1,4 @@
 package APCS;
-
 import java.util.Scanner;
 
 public class FirstThreePrograms 
@@ -11,18 +10,30 @@ public class FirstThreePrograms
         System.out.println("Would you like to test a right triangle (enter 1), compute pi/4 (enter 2), or computer powers of two (enter 3)?");
         int choice = sc.nextInt();
 
-        if(choice == 1)
+        switch(choice)
         {
+            case 1:
             System.out.println("Give me one side of the triangle please.");
             int firstSide = sc.nextInt();
             System.out.println("Give me another side of the triangle please.");
             int secondSide = sc.nextInt();
             System.out.println("Give me the last side of the triangle please.");
             int thirdSide = sc.nextInt();
-            rightTriangle(firstSide, secondSide, thirdSide);
+            boolean rightTriChecker = rightTriangle(firstSide, secondSide, thirdSide);
+            if(rightTriChecker == true)
+            {
+                System.out.println("It is a right triangle!");
+            } else {
+                System.out.println("It is not a right triangle!");
+            }
+            break;
+            case 2:
+            System.out.println("How many terms would you like to go into the sequence?");
+            int N = sc.nextInt();
+            double piFour = LeibnizFormPi(N);
+            System.out.println(piFour);
         }
     }   
-
 
 public static boolean rightTriangle(int firstSide, int secondSide, int thirdSide)
 {
@@ -54,11 +65,28 @@ public static boolean rightTriangle(int firstSide, int secondSide, int thirdSide
     if(result == check)
     {
         return true;
-        System.out.println("It is a right triangle!");
     } else {
         return false;
-        System.out.println("It is not a right triangle!")
     }
 }
 
+public static double LeibnizFormPi(int N)
+{
+    double piDivFour = 0;
+    double numberAtN;
+    for(int i = 0; i <= N; i++)
+    {
+        double topTerm = 0.0;
+        if(i % 2 == 0)
+        {
+            topTerm = 1;
+        } else {
+            topTerm = -1;
+        }
+        numberAtN = topTerm/((2*i)+1);
+        piDivFour += numberAtN;
+    }
+    return piDivFour;
 }
+}
+
