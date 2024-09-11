@@ -31,7 +31,7 @@ public class FirstThreePrograms
             System.out.println("How many terms would you like to go into the sequence?");
             int N = sc.nextInt();
             double piFour = LeibnizFormPi(N);
-            System.out.println(piFour);
+            System.out.println("The Leibniz sequence says that " + N + " terms into the sequence, pi/4 = " + piFour);
             break;
             case 3:
             System.out.println("2^x? (Type in your x value)");
