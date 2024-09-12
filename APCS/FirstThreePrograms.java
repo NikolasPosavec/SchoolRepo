@@ -34,17 +34,22 @@ public class FirstThreePrograms
             System.out.println("The Leibniz sequence says that " + N + " terms into the sequence, pi/4 = " + piFour);
             break;
             case 3:
-            System.out.println("2^x? (Type in your x value)");
-            int P = sc.nextInt();
-            int finalPow = powsOfTwo(P);
-            if(finalPow == -1)
-            {
-                System.out.println("Invalid input, try again.");
-            } else {
-                System.out.println("2^" + P + " = " + finalPow);
-            }
+            int P;
+            do {
+                System.out.println("2^x? (Type in your x value, or a negative number to quit)");
+                P = sc.nextInt();
+                if (P >= 0) {
+                    int finalPow = powsOfTwo(P);
+                    if (finalPow == -1) {
+                        System.out.println("Invalid input, try again.");
+                    } else {
+                        System.out.println("2^" + P + " = " + finalPow);
+                    }
+                }
+            } while (P >= 0);
+            System.out.println("Exited powers of two.");
             break;
-        }
+        }        
     }   
 
 public static boolean rightTriangle(int firstSide, int secondSide, int thirdSide)
