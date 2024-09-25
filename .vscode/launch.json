@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "RandomNumberNP",
+            "request": "launch",
+            "mainClass": "APCS.RandomNumberNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "ArraylistClassProgramNP",
             "request": "launch",
             "mainClass": "APCS.ArraylistClassProgramNP",
