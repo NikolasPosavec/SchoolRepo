@@ -5,7 +5,7 @@ public class RandomNumberNP
 {
     public static void main(String[] args) 
     {
-        ArrayList list = new ArrayList();
+        ArrayList <Integer> list = new <Integer> ArrayList();
         int limit = 20;
         int total = 0;
         double avg = 0;
@@ -13,15 +13,17 @@ public class RandomNumberNP
         for(int i = 0; i <= limit; i++)
         {
             int x = (int)(Math.random()*100)+1;
-            Integer xobj = new Integer(x);
-            list.add(xobj);
+            list.add(x);
+            //Integer xobj = new Integer(x); <- Old Way
+            //list.add(xobj); <- Old way
         }
 
         System.out.println("List of randomly generated numbers: ");
 
         for(int i = 0; i < list.size(); i++)
         {
-            int y = (Integer)list.get(i);
+            //int y = (Integer)list.get(i); <-Old way
+            int y = list.get(i);
             System.out.println(list.get(i));
             total += y;
         }
