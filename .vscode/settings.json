@@ -4,5 +4,8 @@
         "c:\\Program Files (x86)\\Java\\jre-1.8\\lib\\ext\\apcslib.jar",
         "c:\\Program Files (x86)\\Java\\jre-1.8\\lib\\ext\\TurtleGraphics.jar",
         "c:\\Program Files (x86)\\Java\\jre-1.8\\lib\\ext\\BreezySwing.jar"
+    ],
+    "Lua.diagnostics.globals": [
+        "j"
     ]
 }
