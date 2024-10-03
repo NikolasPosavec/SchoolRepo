@@ -8,10 +8,10 @@ public class Poll {
       PollWindow pw = new PollWindow();
       pw.setBounds(0, 0, 900, 900);
       pollFrame.add(pw);
-      pollFrame.setSize(900,900);
+      pollFrame.setSize(900, 900);
       pollFrame.setLayout(null);
-      pollFrame.setVisible(true); 
-      pollFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+      pollFrame.setVisible(true);
+      pollFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    }
 }
 
@@ -89,39 +89,35 @@ class PollWindow extends JPanel implements ActionListener {
 
       final int size = 4 * xStep, x = 5 * xStep - size / 2;
       y = 70;
-      g.setColor(Color.lightGray);
-      g.fillOval(x, y, size, size);
 
       int degrees, from = 0;
-      degrees = countToDegrees(count1, total);
+      degrees = (int) countToDegrees(count1, total);
       g.setColor(Color.pink);
       g.fillArc(x, y, size, size, from, degrees);
       from += degrees;
-      degrees = countToDegrees(count2, total);
+      degrees = (int) countToDegrees(count2, total);
       g.setColor(Color.orange);
       g.fillArc(x, y, size, size, from, degrees);
       from += degrees;
-      degrees = countToDegrees(count3, total);
+      degrees = (int) countToDegrees(count3, total);
       g.setColor(Color.black);
       g.fillArc(x, y, size, size, from, degrees);
       from += degrees;
-      degrees = countToDegrees(count4, total);
+      degrees = (int) countToDegrees(count4, total);
       g.setColor(Color.blue);
       g.fillArc(x, y, size, size, from, degrees);
 
-      
-    g.setColor(Color.black);
-      y += 450; 
-        if (total > 0) {
+      g.setColor(Color.black);
+      y += 450;
+      if (total > 0) {
           g.drawString("Nick: " + String.format("%.1f", (count1 / (double) total) * 100) + "%", 2 * xStep, y);
           g.drawString("Dan: " + String.format("%.1f", (count2 / (double) total) * 100) + "%", 4 * xStep, y);
           g.drawString("Eric: " + String.format("%.1f", (count3 / (double) total) * 100) + "%", 6 * xStep, y);
           g.drawString("Onyeka: " + String.format("%.1f", (count4 / (double) total) * 100) + "%", 8 * xStep, y);
-        }
-
+      }
    }
 
-   private int countToDegrees(int count, int total) {
-      return (int) ((double) count / (double) total * 360.);
+   private double countToDegrees(int count, int total) {
+      return ((double) count / total * 360.);
    }
 }
