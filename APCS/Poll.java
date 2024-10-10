@@ -91,26 +91,39 @@ class PollWindow extends JPanel implements ActionListener {
       y = 70;
    
       //start from pos 90 and change angles to negative cus then it goes right
+      int totalDeg = 0;
       int degrees, from = 90; 
       
       degrees = -(int) countToDegrees(count1, total);
       g.setColor(Color.pink);
       g.fillArc(x, y, size, size, from, degrees);
       from += degrees;
+      totalDeg += degrees;
       
       degrees = -(int) countToDegrees(count2, total);
       g.setColor(Color.orange);
       g.fillArc(x, y, size, size, from, degrees);
       from += degrees;
+      totalDeg += degrees;
       
       degrees = -(int) countToDegrees(count3, total);
       g.setColor(Color.black);
       g.fillArc(x, y, size, size, from, degrees);
       from += degrees;
+      totalDeg += degrees;
       
       degrees = -(int) countToDegrees(count4, total);
       g.setColor(Color.blue);
       g.fillArc(x, y, size, size, from, degrees);
+      from += degrees;
+      totalDeg += degrees;
+
+      if (totalDeg < 360) {
+         //g.setColor(Color.blue);
+         g.fillArc(x, y, size, size, from, degrees);
+        
+         totalDeg += degrees;  
+      }
    
       g.setColor(Color.black);
       y += 450;
