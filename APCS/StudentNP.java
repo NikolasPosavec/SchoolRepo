@@ -71,6 +71,6 @@ public double getAverage ()
 
 public String toString()
 {
-    return "Name: " + name + ", Graduation Year: " + gradYear + ", Gender:" + gender + ""
+    return "Name: " + name + ", Graduation Year: " + gradYear + ", Gender: " + gender + ", Test Grades " + testGrades + ", Average: " + average;
 }
 }
