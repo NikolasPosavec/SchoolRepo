@@ -2,27 +2,28 @@ import java.util.*;
 
 public class StudentNP 
 {
+    Scanner sc = new Scanner (System.in);
     private String name;
     private int gradYear;
     private String gender;
     ArrayList <Double> testGrades = new ArrayList<Double>();
     private double average;
 
-public StudentNP()
+public StudentNP ()
 {
-    name = "";
-    gradYear = 0;
-    gender = "";
-    testGrades = new ArrayList<Double>();
-    average = 0.0;
+    this("", 0, "", new ArrayList<Double>(), 0.0);
 }
-public StudentNP(String n, int gr, String ge, ArrayList <Double> tG, double avg)
+public StudentNP (String n, int gr, String ge, ArrayList <Double> tG, double avg)
 {
     name = n;
     gradYear = gr;
     gender = ge;
     testGrades = tG;
     average = avg;
+}
+public StudentNP (StudentNP s)
+{
+    this(s.name, s.gradYear, s.gender, s.testGrades, s.average);
 }
 
 public void setName (String n)
@@ -51,12 +52,9 @@ public String getGender ()
 }
 public void setTestGrades (ArrayList <Double> tG)
 {
-    for (int i = 0; i < tG.size(); i++)
-    {
-        testGrades.add(tG.get(i));
-    }
+    testGrades = tG;
 }
-public ArrayList getTestGrades ()
+public ArrayList<Double> getTestGrades ()
 {
     return testGrades;
 }
@@ -69,8 +67,14 @@ public double getAverage ()
     return average;
 }
 
-public String toString()
-{
-    return "Name: " + name + ", Graduation Year: " + gradYear + ", Gender: " + gender + ", Test Grades " + testGrades + ", Average: " + average;
+public String toString() {
+    return String.format(
+        "Name: %s%n" +
+        "Graduation Year: %d%n" +
+        "Gender: %s%n" +
+        "Test Grades: %s%n" +
+        "Average: %.2f",
+        name, gradYear, gender, testGrades, average
+    );
 }
 }

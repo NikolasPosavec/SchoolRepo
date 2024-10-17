@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TestStudentNP",
+            "request": "launch",
+            "mainClass": "TestStudentNP",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "Poll",
             "request": "launch",
             "mainClass": "Poll",
