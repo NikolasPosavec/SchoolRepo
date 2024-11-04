@@ -1,3 +1,6 @@
+//EXTRA CREDIT THING IS THE SEARCH METHOD
+//******************************************** */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -98,24 +101,37 @@ public class Library
         }
         System.out.println("Patron or book not found.");
     }
-
-    public static void main(String[] args) 
-    {
+    public void searchBooks(String searchTerm) {
+        System.out.println("Search Results for '" + searchTerm + "':");
+        boolean found = false; // Flag to check if any book is found
+        for (BookNP book : books) {
+            if (book.getTitle().toLowerCase().contains(searchTerm.toLowerCase()) ||
+                book.getAuthor().toLowerCase().contains(searchTerm.toLowerCase())) {
+                System.out.println(book);
+                found = true; // Set flag to true if a match is found
+            }
+        }
+        if (!found) {
+            System.out.println("No matching books found.");
+        }
+    }
+    
+    public static void main(String[] args) {
         Library library = new Library();
-        String booksFilePath = "/home/bolt/nikolas/SchoolRepo-main/APCS/books.txt"; 
-        String patronsFilePath = "/home/bolt/nikolas/SchoolRepo-main/APCS/patrons.txt"; 
-        
+        String booksFilePath = "/home/bolt/nikolas/SchoolRepo/SchoolRepo/APCS/books.txt"; 
+        String patronsFilePath = "/home/bolt/nikolas/SchoolRepo/SchoolRepo/APCS/patrons.txt"; 
+    
         library.loadBooksFromFile(booksFilePath);
         library.loadPatronsFromFile(patronsFilePath);
-
+    
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
-
+    
         while (running) {
-            System.out.println("Menu:\n1. View Books\n2. View Patrons\n3. Add Book\n4. Add Patron\n5. Checkout Book\n6. Return Book\n7. Exit");
+            System.out.println("Menu:\n1. View Books\n2. View Patrons\n3. Search Books\n4. Add Book\n5. Add Patron\n6. Checkout Book\n7. Return Book\n8. Exit");
             int choice = scanner.nextInt();
             scanner.nextLine();
-
+    
             switch (choice) {
                 case 1:
                     library.displayBooks();
@@ -124,35 +140,42 @@ public class Library
                     library.displayPatrons();
                     break;
                 case 3:
+                    System.out.println("Enter search term:");
+                    String searchTerm = scanner.nextLine();
+                    library.searchBooks(searchTerm); // Call the search method
+                    break;
+                case 4:
                     System.out.println("Enter title, author, ISBN:");
                     String title = scanner.nextLine();
                     String author = scanner.nextLine();
                     String isbn = scanner.nextLine();
                     library.addBook(title, author, isbn);
                     break;
-                case 4:
+                case 5:
                     System.out.println("Enter patron name:");
                     String patronName = scanner.nextLine();
                     library.addPatron(patronName);
                     break;
-                case 5:
+                case 6:
                     System.out.println("Enter patron name and book title:");
                     String patronForCheckout = scanner.nextLine();
                     String bookForCheckout = scanner.nextLine();
                     library.checkoutBook(patronForCheckout, bookForCheckout);
                     break;
-                case 6:
+                case 7:
                     System.out.println("Enter patron name and book title:");
                     String patronForReturn = scanner.nextLine();
                     String bookForReturn = scanner.nextLine();
                     library.returnBook(patronForReturn, bookForReturn);
                     break;
-                case 7:
+                case 8:
                     running = false;
                     break;
                 default:
                     System.out.println("Invalid choice. Try again.");
             }
         }
+        scanner.close();
     }
+    
 }

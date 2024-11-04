@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Library",
+            "request": "launch",
+            "mainClass": "Library",
+            "projectName": "SchoolRepo_7b2b16a6"
+        },
+        {
+            "type": "java",
             "name": "TestStudentNP",
             "request": "launch",
             "mainClass": "TestStudentNP",
