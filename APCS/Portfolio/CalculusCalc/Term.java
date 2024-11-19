@@ -5,18 +5,24 @@ public class Term
 {
     public String TopOfFunct;
     public String BotOfFunct;
-    public String OutsideOp;
+    public String OuterOp;
+    public String[] TermBuilt;
 
     public Term()
     {
         TopOfFunct = "";
         BotOfFunct = "";
-        OutsideOp = "";
+        OuterOp = "";
+        TermBuilt = [TopOfFunct, BotOfFunct, OuterOp];
     }
-    public Term(String T, String B)
+    public Term(String T, String B, String O)
     {
         TopOfFunct = T;
         BotOfFunct = B;
+        OuterOp = O;
+        TermBuilt = [TopOfFunct, BotOfFunct, OuterOp];
     }
     
+    public String TermBuilder
+   
 }
