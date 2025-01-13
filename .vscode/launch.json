@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "MagicTilesGame",
+            "request": "launch",
+            "mainClass": "MagicTilesGame",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "SortingVisualizer",
             "request": "launch",
             "mainClass": "Portfolio.SortingVisualizer.SortingVisualizer",
