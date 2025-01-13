@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "PictureExplorer",
+            "request": "launch",
+            "mainClass": "src.classes.PictureExplorer",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
+            "name": "ColorChooser",
+            "request": "launch",
+            "mainClass": "ColorChooser",
+            "projectName": "SchoolRepo_dfae92c2"
+        },
+        {
+            "type": "java",
             "name": "MagicTilesGame",
             "request": "launch",
             "mainClass": "MagicTilesGame",
