@@ -1,0 +1,21 @@
+(1) there is a method called getTotal that totals all the values in a
+2D array of integers, use a nested for loop to find the largest of
+all elements in the integer array matrix[][].
+public int findLargest()
+{
+}
+
+(2) change the red and green pixels to be blue using nested for-each loops, 
+do what zeroblue does basically
+
+(3) write appropriate header for SimplePicture class
+the flow chart thingy - 
+(a) simplepicture implements digital picture
+(b) picture extends simplepicture
+(c) a simple picture has 1* pixels, 1 single picture belogns to simple picture
+(d) do same as c for pixles & color
+
+(4) why cant use nested for-each loops for mirror vertical
+(5) how would change code from row major to column major
+(6) choose any mirroring method from picture lab and implement it any way youd like. 
+explain what its mirroring

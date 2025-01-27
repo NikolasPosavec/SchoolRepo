@@ -1,0 +1,11 @@
+{
+    "name": "AP Classroom Sentence Counter",
+    "version": "1.0",
+    "manifest_version": 3,
+    "description": "An extension that will display the sentence number next to each sentence.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "permissions": ["activeTab", "scripting"]
+  }
