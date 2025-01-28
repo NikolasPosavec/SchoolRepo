@@ -1,11 +1,21 @@
 {
-    "name": "AP Classroom Sentence Counter",
-    "version": "1.0",
-    "manifest_version": 3,
-    "description": "An extension that will display the sentence number next to each sentence.",
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon.png"
-    },
-    "permissions": ["activeTab", "scripting"]
-  }
+  "manifest_version": 3,
+  "name": "AP Classroom Sentence Counter",
+  "version": "1.0",
+  "description": "Numbers sentences in AP Classroom passages",
+  "icons": {
+    "48": "JAKE.png",
+    "128": "JAKE.png"
+  },
+  "action": {
+    "default_icon": "JAKE.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://apclassroom.collegeboard.org/*"],
+    "js": ["content-script.js"],
+    "css": ["styles.css"],
+    "run_at": "document_end"
+  }],
+  "permissions": ["activeTab", "scripting", "tabs"]
+}

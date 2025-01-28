@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Library",
+            "request": "launch",
+            "mainClass": "Library",
+            "projectName": "SchoolRepo_3df7af01"
+        },
+        {
+            "type": "java",
             "name": "PictureExplorer",
             "request": "launch",
             "mainClass": "src.classes.PictureExplorer",

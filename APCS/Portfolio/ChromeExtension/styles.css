@@ -1,0 +1,17 @@
+.sentence-badge {
+    display: inline-block;
+    background: #2196F3;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 6px;
+    vertical-align: text-top;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  /* Preserve AP Classroom's formatting */
+  .passage_para {
+    line-height: 1.6 !important;
+  }
