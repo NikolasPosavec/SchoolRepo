@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "VerticalMirror",
+            "request": "launch",
+            "mainClass": "VerticalMirror",
+            "projectName": "SchoolRepo_1476b7f4"
+        },
+        {
+            "type": "java",
             "name": "Library",
             "request": "launch",
             "mainClass": "Library",
