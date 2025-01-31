@@ -1,0 +1,48 @@
+public int findLargest()
+{
+    int largest = 0;
+    for(int[] rowArray : matrix)
+    {
+        for(int num : rowArray)
+        {
+            if(num > largest)
+            {
+                largest = num;
+            }
+        }
+    }
+    return largest;
+}
+public void RedAndGreen()
+{
+    Pixel[][] pixels = this.get2DPixels;
+    for(Pixel[] rowArray : pixels)
+    {
+        for(Pixel p : rowArray)
+        {
+            p.setGreen(0);
+            p.setRed(0);
+        }
+    }
+}
+public void MirrorVertical()
+{
+    int[][] arr = {{1,2,3},{4,5,6}};
+    //mirror left to right
+    for(int[] rowArray : arr)
+    {
+        for(int j = 0; j < rowArray.length / 2; j++)
+        {
+            rowArray[rowArray.length - 1 - j] = rowArray[j];
+        }
+    }
+    //print
+    for(int[] rowArray : arr)
+    {
+        for(int num : rowArray)
+        {
+            System.out.print(num + " ");
+        }
+        System.out.println();
+    }
+}
