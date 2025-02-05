@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "TurtleGraphicsNP",
+            "request": "launch",
+            "mainClass": "TurtleGraphicsNP",
+            "projectName": "SchoolRepo_1476b7f4"
+        },
+        {
+            "type": "java",
             "name": "VerticalMirror",
             "request": "launch",
             "mainClass": "VerticalMirror",

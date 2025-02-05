@@ -1,11 +1,17 @@
 {
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Program Files (x86)\\Java\\jre-1.8\\lib\\ext\\apcslib.jar",
-        "c:\\Program Files (x86)\\Java\\jre-1.8\\lib\\ext\\TurtleGraphics.jar",
-        "c:\\Program Files (x86)\\Java\\jre-1.8\\lib\\ext\\BreezySwing.jar"
-    ],
-    "Lua.diagnostics.globals": [
-        "j"
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\BreezySwing.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\chndocs.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\chnutil.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\dnsns.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\ldapsec.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\localedata.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\sunjce_provider.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\sunmscapi.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\sunpkcs11.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\TerminalIO.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\TurtleGraphics.jar",
+        "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\apcslib.jar"
     ]
 }
