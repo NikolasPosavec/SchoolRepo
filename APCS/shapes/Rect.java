@@ -1,6 +1,8 @@
 import TurtleGraphics.Pen;
+import TurtleGraphics.StandardPen;
 
-public class Rect implements Shape {
+
+public class Rect extends AbstractShape implements Shape {
 
    private double xPos, yPos;
    private double height, width;
@@ -26,8 +28,8 @@ public class Rect implements Shape {
   public double perimeter() {
       return 2 * height + 2 * width;
    }
-
-   public void draw (Pen p) {
+   @Override
+   public void draw(Pen p) {
       p.up();
       p.move (xPos, yPos);
       p.down();
@@ -62,6 +64,12 @@ public class Rect implements Shape {
                  + "Area: " + area()+"\n"
 					   + "Perimeter: " + perimeter();
       return str;
+   }
+
+   @Override
+   public void draw(StandardPen p) {
+      // TODO Auto-generated method stub
+      throw new UnsupportedOperationException("Unimplemented method 'draw'");
    }
 }
 

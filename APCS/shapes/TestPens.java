@@ -3,8 +3,10 @@ import java.awt.Color;
 
 public class TestPens {
    public static void main (String[] args){
-      // Declare three variables of the interface type called Pen.
-      Pen p1, p2, p3;
+      StandardPen p1;
+            WigglePen p2;
+                        // Declare three variables of the interface type called Pen.
+                        RainbowPen p3;
 
       // Instantiate three different types of pens and 
       // associate them with the Pen variables.
