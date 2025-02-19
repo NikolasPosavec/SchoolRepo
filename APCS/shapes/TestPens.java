@@ -1,5 +1,7 @@
 import TurtleGraphics.*;
 import java.awt.Color;
+import TerminalIO.KeyboardReader;
+
 
 public class TestPens {
    public static void main (String[] args){

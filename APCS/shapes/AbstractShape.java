@@ -15,12 +15,14 @@ abstract public class AbstractShape implements Shape {
    // Even though this class is never instantiated, it needs constructors
    // to initialize its variables.
    
-   public AbstractShape (){
+   public AbstractShape ()
+   {
       xPos = 0;
       yPos = 0;
    }
    
-   public AbstractShape (double xLoc, double yLoc){
+   public AbstractShape (double xLoc, double yLoc)
+   {
       xPos = xLoc;
       yPos = yLoc;
    }
@@ -30,6 +32,8 @@ abstract public class AbstractShape implements Shape {
    // and terminate with a semicolon. All subclasses must define these methods.
    
    abstract public double area();
+
+   abstract public double perimeter();
    
    abstract public void draw (Pen p);
    

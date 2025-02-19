@@ -41,7 +41,7 @@ public class Wheel extends Circle {
                  + "Radius: " + radius + "\n"
                  + "Spokes: " + spokes + "\n"
                  + "(X,Y) Position: (" + xPos + "," + yPos + ")\n" 
-                 + "Area: " + area();
+                 + "Area: " + area() + "Perimeter: " + perimeter();
       return str;
    }
 }
