@@ -13,5 +13,6 @@
         "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\TerminalIO.jar",
         "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\TurtleGraphics.jar",
         "c:\\Users\\bolt\\Downloads\\OneDrive_2025-02-05\\Java Jar Files\\apcslib.jar"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

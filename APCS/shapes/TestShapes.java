@@ -7,12 +7,12 @@ public class TestShapes {
    public static void main (String[] args) {
 
       // Declare and instantiate a pen, a circle and a rectangle
-      StandardPen p = new StandardPen();
-      AbstractShape s1 = new Circle (20, 30, 40);
-      AbstractShape s2 = new Rect (-20, -20, 10, 20);
-      AbstractShape s3 = new Wheel(-30,-30,10,5);
-      AbstractShape s4 = new Triangle(-60,0,10,30,30);
-      ArrayList<Shape> shapes = new ArrayList();
+      Pen p = new StandardPen();
+      Shape s1 = new Circle (20, 30, 40);
+      Shape s2 = new Rect (-20, -20, 10, 20);
+      Shape s3 = new Wheel(-30,-30,10,5);
+      Shape s4 = new Triangle(-60,0,10,30,30);
+      ArrayList<Shape> shapes = new ArrayList<Shape>();
       shapes.add(s1);
       shapes.add(s2);
       shapes.add(s3);
