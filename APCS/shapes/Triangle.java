@@ -42,9 +42,9 @@ public class Triangle extends AbstractShape implements Shape
         p.down();
         p.setDirection(0);
         p.move(side1);
-        p.turn(180-Math.toDegrees(lawOfCos(side3, side2, side1)));
+        p.turn(180 - Math.toDegrees(lawOfCos(side3, side2, side1)));
         p.move(side2);
-        p.turn(180-Math.toDegrees(lawOfCos(side1, side3, side2)));
+        p.turn(180 - Math.toDegrees(lawOfCos(side1, side3, side2)));
         p.move(side3);
     }
 
@@ -57,7 +57,7 @@ public class Triangle extends AbstractShape implements Shape
 
     public double lawOfCos (double a, double b, double c)
     {
-        return Math.acos((Math.pow(b,2) + Math.pow(c,2) - Math.pow(a,2)/(2*b*c)));
+        return Math.acos((Math.pow(b, 2) + Math.pow(c, 2) - Math.pow(a, 2)) / (2 * b * c));
     }
 
     public String toString()
