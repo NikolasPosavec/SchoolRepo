@@ -7,7 +7,7 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, simpledialog
 from tkinter.ttk import Progressbar
 
-# ASCII characters ordered from darkest to lightest
+# ASCII characters ordered from lightest to darkest
 ascii_chars = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
 # Default settings file
