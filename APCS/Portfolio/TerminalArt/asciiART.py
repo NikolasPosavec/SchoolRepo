@@ -10,10 +10,8 @@ from tkinter.ttk import Progressbar
 # ASCII characters ordered from lightest to darkest
 ascii_chars = "`^\",:;Il!i~+_-?][}{1)(|\\/tfjrxnuvczXYUJCLQ0OZmwqpdbkhao*#MW&8%B@$"
 
-# Default settings file
 settings_file = "settings.json"
 
-# Load saved settings
 def load_settings():
     if os.path.exists(settings_file):
         try:
@@ -23,7 +21,6 @@ def load_settings():
             pass
     return {}
 
-# Save settings
 def save_settings():
     settings = {
         "image_path": image_path_var.get(),
@@ -45,11 +42,10 @@ def image_to_ascii(image_path, new_width=100, output_file="ascii_art_output.txt"
     width, height = im.size
     aspect_ratio = height / width
 
-    # Adjust the height scaling factor
-    new_height = int(aspect_ratio * new_width * 0.55)  # Tweaked factor to ensure proper scaling
+    new_height = int(aspect_ratio * new_width * 0.55) 
     im = im.resize((new_width, new_height))
 
-    # Create brightness matrix using getdata for more efficient access to pixel data
+    # Create brightness matrix using getdata
     brightness_matrix = [
         int(0.299 * r + 0.587 * g + 0.114 * b)
         for r, g, b in im.getdata()
@@ -72,7 +68,6 @@ def image_to_ascii(image_path, new_width=100, output_file="ascii_art_output.txt"
 
     messagebox.showinfo("Success", f"ASCII art saved to {output_file}")
 
-    # If colored output is enabled, print to terminal
     if colored:
         def get_color_code(r, g, b):
             return f"\033[38;2;{r};{g};{b}m"
@@ -91,7 +86,6 @@ def image_to_ascii(image_path, new_width=100, output_file="ascii_art_output.txt"
         progress_bar["value"] = 100
         root.update_idletasks()
 
-# Show image preview
 def show_preview():
     try:
         im = Image.open(image_path_var.get()).convert("RGB")
@@ -103,14 +97,12 @@ def show_preview():
     except Exception as e:
         messagebox.showerror("Error", f"Error loading preview: {e}")
 
-# Select image from file dialog
 def select_image():
     file_path = filedialog.askopenfilename(filetypes=[("Image Files", "*.png;*.jpg;*.jpeg;*.bmp;*.gif")])
     if file_path:
         image_path_var.set(file_path)
         show_preview()
 
-# Crop image before converting
 def crop_image():
     try:
         im = Image.open(image_path_var.get())
@@ -126,7 +118,6 @@ def crop_image():
     except Exception as e:
         messagebox.showerror("Error", f"Error cropping image: {e}")
 
-# Generate ASCII art
 def generate_ascii():
     image_path = image_path_var.get()
     try:
@@ -145,22 +136,19 @@ def generate_ascii():
         messagebox.showerror("Error", "The selected image file does not exist.")
         return
 
-    # Initialize progress bar and start conversion
     progress_bar["value"] = 0
     progress_bar["maximum"] = 100
     root.update_idletasks()
 
     image_to_ascii(image_path, width, output_file, colored, progress_bar)
-    save_settings()  # Save settings after generating ASCII art
+    save_settings() 
 
 # GUI setup
 root = tk.Tk()
 root.title("Image to ASCII Converter")
 
-# Load settings
 settings = load_settings()
 
-# Variables for inputs
 image_path_var = tk.StringVar(value=settings.get("image_path", ""))
 width_var = tk.StringVar(value=settings.get("width", "100"))
 output_var = tk.StringVar(value=settings.get("output_file", "ascii_art_output.txt"))
@@ -194,5 +182,4 @@ preview_button.pack(pady=5)
 preview_label = tk.Label(root)
 preview_label.pack(pady=5)
 
-# Start the GUI loop
 root.mainloop()
