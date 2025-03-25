@@ -5,7 +5,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.io.IOException;
 
-public class FlashcardGUI 
+public class flash_card_gui
 {
     private terms_and_defs flashcards;
     private int currentCardIndex = 0;
@@ -20,7 +20,7 @@ public class FlashcardGUI
     private JButton saveButton;
     private JButton loadButton;
 
-    public FlashcardGUI() 
+    public flash_card_gui() 
     {
         flashcards = new terms_and_defs();
         initializeGUI();
@@ -191,6 +191,6 @@ public class FlashcardGUI
 
     public static void main(String[] args) 
     {
-        SwingUtilities.invokeLater(() -> new FlashcardGUI());
+        SwingUtilities.invokeLater(() -> new flash_card_gui());
     }
 }
